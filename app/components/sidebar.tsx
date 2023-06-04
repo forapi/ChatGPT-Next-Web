@@ -4,12 +4,13 @@ import styles from "./home.module.scss";
 
 import { IconButton } from "./button";
 import SettingsIcon from "../icons/settings.svg";
-import GithubIcon from "../icons/github.svg";
+// import GithubIcon from "../icons/github.svg";
 import ChatGptIcon from "../icons/chatgpt.svg";
 import AddIcon from "../icons/add.svg";
 import CloseIcon from "../icons/close.svg";
 import MaskIcon from "../icons/mask.svg";
 import PluginIcon from "../icons/plugin.svg";
+import WechatIcon from "../icons/wechat.svg";
 
 import Locale from "../locales";
 
@@ -20,7 +21,8 @@ import {
   MIN_SIDEBAR_WIDTH,
   NARROW_SIDEBAR_WIDTH,
   Path,
-  REPO_URL,
+  // REPO_URL,
+  WECHAT_SHARE_URL,
 } from "../constant";
 
 import { Link, useNavigate } from "react-router-dom";
@@ -121,7 +123,7 @@ export function SideBar(props: { className?: string }) {
       <div className={styles["sidebar-header"]}>
         <div className={styles["sidebar-title"]}>ChatGPT Next</div>
         <div className={styles["sidebar-sub-title"]}>
-          Build your own AI assistant.
+          <a href="https://docs.qq.com/doc/DT0NTUHpIeFNtQUJr">by:梦想技术宅</a>
         </div>
         <div className={styles["sidebar-logo"] + " no-dark"}>
           <ChatGptIcon />
@@ -174,8 +176,10 @@ export function SideBar(props: { className?: string }) {
             </Link>
           </div>
           <div className={styles["sidebar-action"]}>
-            <a href={REPO_URL} target="_blank">
-              <IconButton icon={<GithubIcon />} shadow />
+            {/* <a href={REPO_URL} target="_blank"> */}
+            <a href={WECHAT_SHARE_URL} target="_blank">
+              {/* <IconButton icon={<GithubIcon />} shadow /> */}
+              <IconButton icon={<WechatIcon />} shadow />
             </a>
           </div>
         </div>

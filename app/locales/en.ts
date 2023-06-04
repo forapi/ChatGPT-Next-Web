@@ -5,7 +5,7 @@ const en: RequiredLocaleType = {
   WIP: "Coming Soon...",
   Error: {
     Unauthorized:
-      "Unauthorized access, please enter access code in settings page.",
+      "Unauthorized access, please enter access code in settings page.联系客服微信：vote4you",
   },
   ChatItem: {
     ChatItemCount: (count: number) => `${count} messages`,
